@@ -1,0 +1,12 @@
+
+<!-- Note filering on an array column can be done using manual filter if needed based on the requirement, I am not implementing that for now -->
+<kendo-grid [kendoGridBinding]="gridData" filterable="menu" [filterable]="true">
+    <kendo-grid-column field="name" title="Name"> </kendo-grid-column>
+    <kendo-grid-column field="age" title="Age" filter="numeric"> </kendo-grid-column>
+    <kendo-grid-column field="hobbies" title="Hobbies"> 
+        <ng-template kendoGridCellTemplate let-dataItem let-rowIndex="rowIndex">
+            {{dataItem.hobbies.toString()}}
+          </ng-template>
+    </kendo-grid-column>
+    
+</kendo-grid>
